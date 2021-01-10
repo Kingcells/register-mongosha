@@ -192,6 +192,7 @@
     Yashinu#1000
     Alosha#3779
     Miaf#3787
+    Davidson#0001
 
 # Türkiye için Feragatname
 > Bot büyük miktarda veri kaydediyor. Dilersen bu verileri kayıt etmesini önleyebilirsin. Gerçekten şaka yapmıyorum. Eğer büyük kitlelere hitap ediyorsan tek başına Mongo Cluster'ini ayırman gerekebilir. İlaveten botun içerisinde herhangi bir yerde Serendia Squad reklamı bulunmamakta. Bunu sen ya da başkası yapmadı, biz yaptık.
