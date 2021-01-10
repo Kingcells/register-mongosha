@@ -1,0 +1,36 @@
+{
+
+"botSettings": {
+    "token": "",
+    "owners": [""],
+    "prefix": "",
+    "botStatus": "",
+    "botVoiceChannelID": "",
+    "mongoURL": ""
+},
+
+"channelSettings": {
+    "register": "",
+    "rules": "",
+    "wlcmessageChannel": ""
+},
+
+"roleSettings": {
+    "registerer": "",
+    "booster": [""],
+    "unregisteredRole": [""],
+    "girlRole": [""],
+    "boyRole": [""]
+},
+
+"colors": {
+    "redColor": "RED", 
+    "magentaColor": "#AF48F1"
+},
+
+"serverSettings": {
+    "serverID": "",
+    "serverTag": ""
+}
+
+}
