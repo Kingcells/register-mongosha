@@ -63,7 +63,7 @@
 ## PL
 > Cześć kolego! Dzisiaj pokażę Ci bota rejestracyjnego. Może być wiele błędów, możesz przyjść do naszego serwera [Discord](https://discord.gg/Sy5xRZMRx2) w tym celu. Ten bot zawiera moduł, który opracowaliśmy jako bazę danych. ([Mongosha](https://www.npmjs.com/package/@aloshai/mongosha)) 
 
-> Normalne, jeśli masz problemy ze zrozumieniem tego bota. Ta łódź jest łodzią stworzoną dla wielu popularnych serwerów w Turcji. Nazywamy te serwery serwerami „publicznymi”. Jeśli mimo wszystko chcesz go używać, nie krępuj się. Jeśli ci się spodoba, nie zapomnij rzucić gwiazdki. :)
+> Normalne, jeśli masz problemy ze zrozumieniem tego bota. Ta bota jest łodzią stworzoną dla wielu popularnych serwerów w Turcji. Nazywamy te serwery serwerami „publicznymi”. Jeśli mimo wszystko chcesz go używać, nie krępuj się. Jeśli ci się spodoba, nie zapomnij rzucić gwiazdki. :)
 
 ## Główne Cechy
  - Rejestracja **mężczyzn i kobiet**.
