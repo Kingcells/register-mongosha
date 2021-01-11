@@ -1,6 +1,6 @@
 echo off
 cls
 :a
-node register.js
+npm start
 goto a
 color b

@@ -6,9 +6,9 @@ const no = ['hayır']
 
 const deleteCommandMessages = function (msg, client) { // eslint-disable-line consistent-return
 	if (msg.deletable && client.provider.get('global', 'deletecommandmessages', false)) {
-	  return msg.delete();
+		return msg.delete();
 	}
-  };
+};
 
 class Util {
 	static wait(ms) {
