@@ -30,8 +30,13 @@ module.exports.run = async (client, message, args) => {
   if (!age) return message.channel.send("Erkek olarak kayıt edeceğin kişinin yaşını yazmalısın.")
 
   user.roles.cache.has(settings.roleSettings.booster) ? user.roles.set(settings.roleSettings.boyRole.concat(settings.roleSettings.booster)) : user.roles.set(settings.roleSettings.boyRole);
-  user.setNickname(`${settings.serverSettings.serverTag} ${name.replace("_", " ")} | ${age}`)
-
+  
+    if (user.user.tag.includes(settings.serverSettings.serverTag)) {
+    user.setNickname(`${settings.serverSettings.serverTag} ${name.replace("_"," ")} | ${age}`)
+  } else {
+    user.setNickname(`${settings.serverSettings.unTag} ${name.replace("_"," ")} | ${age}`)
+  }
+  
   await db.push(`kayıt.öncekibilgiler.${user.id}`, {
     Registerer: message.author.id,
     Name: args[1].charAt(0).toUpperCase() + args[1].slice(1).toLowerCase(),
