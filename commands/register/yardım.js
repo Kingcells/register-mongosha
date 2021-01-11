@@ -1,19 +1,20 @@
-const {DatabaseManager} = require("@aloshai/mongosha");
-const { MessageEmbed } = require("discord.js");
-const db = DatabaseManager.getDatabase("REGISTER")
-const settings = require("../../settings.json")
-const moment = require("moment")
+const { MessageEmbed, Client, Message } = require("discord.js");
+const settings = require("../../settings.json");
+
+/**
+ * @param {Client} client 
+ * @param {Message} message 
+ * @param {Array<String>} args 
+ */
 module.exports.run = async (client, message, args) => {
 
   let cezarolu = settings.roleSettings.registerer
-  if(!message.member.hasPermission("ADMINISTRATOR") && !message.member.roles.cache.has(cezarolu)) {
-      return message.channel.send(new MessageEmbed().setAuthor("Yetersiz Yetki").setDescription(`**\`»\`** Bu komutu kullanabilmek için \`Admin\` veya \`Kayıt Sorumlusu\` yetkisine sahip olman gerekmekte.`).setColor(settings.colors.redColor)).then(x => x.delete({timeout:6500}));
-  }
+  if (!message.member.hasPermission("ADMINISTRATOR") && !message.member.roles.cache.has(cezarolu)) return message.channel.send(new MessageEmbed().setAuthor("Yetersiz Yetki").setDescription(`**\`»\`** Bu komutu kullanabilmek için \`Admin\` veya \`Kayıt Sorumlusu\` yetkisine sahip olman gerekmekte.`).setColor(settings.colors.redColor)).then(x => x.delete({ timeout: 6500 }));
 
   let embed = new MessageEmbed()
-  .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
-  .setTitle("Kayıt Komutları")
-  .setDescription(`Selam! Bu bot sunucundaki üyeleri kolayca kayıt edebilmen için tasarlandı. Aşağıda komutların genel bilgisine ulaşabilirsin. Unutma bir üyenin iki ismi varsa boşluk koymak için \`_\` işaretini kullanabilirsin.
+    .setAuthor(message.author.tag, message.author.avatarURL({ dynamic: true }))
+    .setTitle("Kayıt Komutları")
+    .setDescription(`Selam! Bu bot sunucundaki üyeleri kolayca kayıt edebilmen için tasarlandı. Aşağıda komutların genel bilgisine ulaşabilirsin. Unutma bir üyenin iki ismi varsa boşluk koymak için \`_\` işaretini kullanabilirsin.
 
   __**Erkek Üye Kayıdı**__
  \`>\` Erkek üyeleri kaydetmek için: \`erkek [etiket veya ID] [adı] [yaş]\`
@@ -36,10 +37,9 @@ __**Kaydedilenleri Görmek İçin**__
 __**Kayıtsıza Atmak İçin**__
 \`>\` Bir üyenin bütün rollerini alıp kayıtsız rolü vermek için: \`kayıtsız [etiket veya ID]\`
   `)
-  .setColor(settings.colors.magentaColor)
+    .setColor(settings.colors.magentaColor)
 
-message.channel.send(embed)
-
+  message.channel.send(embed)
 }
 
 module.exports.conf = {

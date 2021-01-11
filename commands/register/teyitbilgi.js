@@ -1,15 +1,20 @@
-const {DatabaseManager} = require("@aloshai/mongosha");
-const { MessageEmbed } = require("discord.js");
-const db = DatabaseManager.getDatabase("REGISTER")
-const settings = require("../../settings.json")
-const moment = require("moment")
-module.exports.run = async (client, message, args) => {
+const { DatabaseManager } = require("@aloshai/mongosha");
+const { MessageEmbed, Client, Message } = require("discord.js");
+const db = DatabaseManager.getDatabase("REGISTER");
+const settings = require("../../settings.json");
+const moment = require("moment");
 
+/**
+ * @param {Client} client 
+ * @param {Message} message 
+ * @param {Array<String>} args 
+ */
+module.exports.run = async (client, message, args) => {
   let cezarolu = settings.roleSettings.registerer
-  if(!message.member.hasPermission("ADMINISTRATOR") && !message.member.roles.cache.has(cezarolu)) {
-      return message.channel.send(new MessageEmbed().setAuthor("Yetersiz Yetki").setDescription(`**\`»\`** Bu komutu kullanabilmek için \`Admin\` veya \`Kayıt Sorumlusu\` yetkisine sahip olman gerekmekte.`).setColor(settings.colors.redColor)).then(x => x.delete({timeout:6500}));
+  if (!message.member.hasPermission("ADMINISTRATOR") && !message.member.roles.cache.has(cezarolu)) {
+    return message.channel.send(new MessageEmbed().setAuthor("Yetersiz Yetki").setDescription(`**\`»\`** Bu komutu kullanabilmek için \`Admin\` veya \`Kayıt Sorumlusu\` yetkisine sahip olman gerekmekte.`).setColor(settings.colors.redColor)).then(x => x.delete({ timeout: 6500 }));
   }
-  
+
   let user = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.member
   if (!user) return message.channel.send("Bir üyeyi etiketlemelisin.")
   let check = await db.has(`kayıt.yetkili.bilgiler.${user.user.id}`)
@@ -23,11 +28,11 @@ module.exports.run = async (client, message, args) => {
   let kadınsayı = await db.get(`kayıt.${message.author.id}.kadın`) || 0
   let erkeksayı = await db.get(`kayıt.${message.author.id}.erkek`) || 0
 
-let embed = new MessageEmbed()
-.setAuthor(user.user.tag, user.user.avatarURL({dynamic: true}))
-.setTitle("Teyit Bilgisi")
-.setThumbnail(user.user.avatarURL({dynamic: true}))
-.setDescription(`\`•\` **Toplam Kayıt:** ${kadınsayı || 0 + erkeksayı || 0}
+  let embed = new MessageEmbed()
+    .setAuthor(user.user.tag, user.user.avatarURL({ dynamic: true }))
+    .setTitle("Teyit Bilgisi")
+    .setThumbnail(user.user.avatarURL({ dynamic: true }))
+    .setDescription(`\`•\` **Toplam Kayıt:** ${kadınsayı || 0 + erkeksayı || 0}
 \`-\` Kadın Kayıt: ${kadınsayı || "0"}
 \`-\` Erkek Kayıt: ${erkeksayı || "0"} 
 
@@ -47,16 +52,16 @@ let embed = new MessageEmbed()
 \`-\` Cinsiyet: ${fetch[fetch.length - 1].Sex}
 \`-\` Tarih: \`${moment(fetch[fetch.length - 1].Time).format("DD MMMM YYYY (HH:mm:ss)")}\`
 `)
-.setColor(settings.colors.magentaColor)
+    .setColor(settings.colors.magentaColor)
 
-message.channel.send(embed)
+  message.channel.send(embed)
 
 }
 
 module.exports.conf = {
   enabled: true,
   guildOnly: true,
-  aliases: ["teyitbilgi","teyit-bilgi","tbilgi","bilgi"]
+  aliases: ["teyitbilgi", "teyit-bilgi", "tbilgi", "bilgi"]
 };
 
 module.exports.help = {
