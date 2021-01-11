@@ -4,6 +4,7 @@
 
 ## Main Features
 
+ - **NEW!** If the member has a Tag on it, do not give a different name if the member has no tag on it. 
  - **Male** and **Female** registration.
  - **Old registered** names.
  - **Top registration** system.
@@ -66,6 +67,7 @@
 > Normalne, jeśli masz problemy ze zrozumieniem tego bota. Ta bota jest łodzią stworzoną dla wielu popularnych serwerów w Turcji. Nazywamy te serwery serwerami „publicznymi”. Jeśli mimo wszystko chcesz go używać, nie krępuj się. Jeśli ci się spodoba, nie zapomnij rzucić gwiazdki. :)
 
 ## Główne Cechy
+ - **NOWY!** Jeśli członek ma znacznik, nie nadawaj innej nazwy, jeśli członek nie ma na sobie znacznika.
  - Rejestracja **mężczyzn i kobiet**.
  - Zarejestrowano **stare nazwy**.
  - Władze z największą **liczbą zarejestrowany**.
@@ -126,6 +128,7 @@
 
 ## Ana Özellikler
 
+ - **YENİ!** Üyenin üzerinde belirtilen Tag varsa farklı eğer yoksa farklı isim verme seçeneği.
  - **Kadın** ve **Erkek** kayıt.
  - `Eski isimleri` görüntüleme şansı.
  - **En fazla kayıt eden** yetkilileri listelemek.
