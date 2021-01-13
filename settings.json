@@ -16,6 +16,10 @@
     },
     "roleSettings": {
         "registerer": "",
+        "vipRole": "",
+        "teamRole": "",
+        "musicianRole": "",
+        "otherRole": "",
         "booster": [
             ""
         ],
@@ -31,7 +35,10 @@
     },
     "colors": {
         "redColor": "RED",
-        "magentaColor": "#AF48F1"
+        "magentaColor": "#AF48F1",
+        "blackColor": "0f3057",
+        "goldColor": "ffe5b9",
+        "myshlumColor": "cd5d7d"
     },
     "serverSettings": {
         "serverID": "",
