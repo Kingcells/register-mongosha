@@ -1,22 +1,22 @@
 {
     "botSettings": {
-        "token": "",
+        "token": "ODQ2MDE3MTk2NDgwMDA0MTE3.YKpY6Q.BwillT8s2JOCl62plE6YWIFVU3U",
         "owners": [
             ""
         ],
         "prefix": "!",
-        "botStatus": "",
-        "botVoiceChannelID": "",
+        "botStatus": "Athena ❤️ Kingcells",
+        "botVoiceChannelID": "851536243271401542",
         "mongoURL": ""
     },
     "channelSettings": {
-        "register": "",
-        "rules": "",
-        "wlcmessageChannel": ""
+        "register": "851536166556926001",
+        "rules": "851536194982117436",
+        "wlcmessageChannel": "851536166556926001"
     },
     "roleSettings": {
-        "registerer": "",
-        "vipRole": "",
+        "registerer": "851535562299932682",
+        "vipRole": "851535687437778986",
         "teamRole": "",
         "musicianRole": "",
         "otherRole": "",
@@ -24,13 +24,13 @@
             ""
         ],
         "unregisteredRole": [
-            ""
+            "851537223799013397"
         ],
         "girlRole": [
-            ""
+            "851782828781338634"
         ],
         "boyRole": [
-            ""
+            "851535717032263700"
         ]
     },
     "colors": {
@@ -41,8 +41,8 @@
         "myshlumColor": "cd5d7d"
     },
     "serverSettings": {
-        "serverID": "",
-        "serverTag": "",
-        "unTag": ""
+        "serverID": "851535152554967050",
+        "serverTag": "ャ",
+        "unTag": "ャ"
     }
 }
